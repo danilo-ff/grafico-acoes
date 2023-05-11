@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selecione uma ação</title>
+</head>
+<body>
+	<h1>Selecione uma ação</h1>
+	<form method="POST" action="{{ url_for('gerar_grafico') }}">
+		<select name="acao">
+			<option value="PETR4">PETR4</option>
+			<option value="VALE3">VALE3</option>
+		</select>
+		<button type="submit">Gerar gráfico</button>
+	</form>
+</body>
+</html>
