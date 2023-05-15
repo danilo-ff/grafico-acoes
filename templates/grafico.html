@@ -1,11 +1,142 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Gráfico de preços de fechamento</title>
-</head>
-<body>
-	<h1>Gráfico de preços de fechamento</h1>
-	<img src="data:image/png;base64,{{ grafico_url }}" alt="Gráfico de preços de fechamento">
-	<a href="{{ url_for('index') }}">Voltar</a>
-</body>
-</html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gráfico de preços de fechamento</title>
+    <style>
+      /* Estilo do corpo da página */
+      body {
+        background-color: #0f1724;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Estilo do cabeçalho */
+      header {
+        background-color: #1b2735;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Estilo do título do cabeçalho */
+      h1 {
+        margin: 0;
+        font-size: 40px;
+      }
+
+      /* Estilo do subtítulo do cabeçalho */
+      h2 {
+        margin: 10px 0 0;
+        font-size: 24px;
+        font-weight: normal;
+      }
+
+      /* Estilo do corpo da página */
+      main {
+        padding: 40px;
+        text-align: center;
+      }
+
+      /* Estilo dos destaques do corpo */
+      .destaque {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      /* Estilo do formulário */
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      /* Estilo das labels do formulário */
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      /* Estilo dos campos do formulário */
+      input[type="text"],
+      input[type="email"],
+      select[name="acao"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      /* Estilo do botão do formulário */
+      button[type="submit"], #voltar {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      #voltar {
+        display: block;
+        margin: 0 30% 0 30%;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      /* Estilo do rodapé */
+      footer {
+        background-color: #1b2735;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* Estilo dos links do rodapé */
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Estilo dos links do rodapé quando hover */
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Danilo Invest</h1>
+      <h2>O site mais completo para seus investimentos</h2>
+    </header>
+    <main>
+      <div class="destaque">Gráfico de ações</div>
+      <p>Gráfico de preços de fechamento</p>
+      <form>
+        <img src="data:image/png;base64,{{ grafico_url }}" alt="Gráfico de preços de fechamento">
+        <a id="voltar" href="{{ url_for('index') }}">Voltar</a>
+      </form>
+      
+    </main>
+    <footer>
+      <p>Copyright © 2023 -
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+      </p>
+    </footer>
+    

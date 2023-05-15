@@ -1,93 +1,208 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Selecione uma ação</title>
-</head>
-<body>
-	<h1>Selecione uma ação</h1>
-	<form method="POST" action="{{ url_for('gerar_grafico') }}">
-		<select name="acao">
-			<option value="ABEV3">ABEV3</option>
-			<option value="AZUL4">AZUL4</option>
-			<option value="B3SA3">B3SA3</option>
-			<option value="BBAS3">BBAS3</option>
-			<option value="BBDC3">BBDC3</option>
-			<option value="BBDC4">BBDC4</option>
-			<option value="BBSE3">BBSE3</option>
-			<option value="BEEF3">BEEF3</option>
-			<option value="BPAC11">BPAC11</option>
-			<option value="BRAP4">BRAP4</option>
-			<option value="BRDT3">BRDT3</option>
-			<option value="BRFS3">BRFS3</option>
-			<option value="BRKM5">BRKM5</option>
-			<option value="BRML3">BRML3</option>
-			<option value="BTOW3">BTOW3</option>
-			<option value="CCRO3">CCRO3</option>
-			<option value="CIEL3">CIEL3</option>
-			<option value="CMIG4">CMIG4</option>
-			<option value="COGN3">COGN3</option>
-			<option value="CPFE3">CPFE3</option>
-			<option value="CRFB3">CRFB3</option>
-			<option value="CSAN3">CSAN3</option>
-			<option value="CSNA3">CSNA3</option>
-			<option value="CVCB3">CVCB3</option>
-			<option value="CYRE3">CYRE3</option>
-			<option value="ECOR3">ECOR3</option>
-			<option value="ELET3">ELET3</option>
-			<option value="ELET6">ELET6</option>
-			<option value="EMBR3">EMBR3</option>
-			<option value="ENBR3">ENBR3</option>
-			<option value="ENEV3">ENEV3</option>
-			<option value="ENGI11">ENGI11</option>
-			<option value="EQTL3">EQTL3</option>
-			<option value="EZTC3">EZTC3</option>
-			<option value="FLRY3">FLRY3</option>
-			<option value="GGBR4">GGBR4</option>
-			<option value="GNDI3">GNDI3</option>
-			<option value="GOAU4">GOAU4</option>
-			<option value="GOLL4">GOLL4</option>
-			<option value="HAPV3">HAPV3</option>
-			<option value="HGTX3">HGTX3</option>
-			<option value="HYPE3">HYPE3</option>
-			<option value="IGTA3">IGTA3</option>
-			<option value="IRBR3">IRBR3</option>
-			<option value="ITSA4">ITSA4</option>
-			<option value="ITUB4">ITUB4</option>
-			<option value="JBSS3">JBSS3</option>
-			<option value="JHSF3">JHSF3</option>
-			<option value="KLBN11">KLBN11</option>
-			<option value="LAME4">LAME4</option>
-			<option value="LCAM3">LCAM3</option>
-			<option value="LREN3">LREN3</option>
-			<option value="MGLU3">MGLU3</option>
-			<option value="MRFG3">MRFG3</option>
-			<option value="MRVE3">MRVE3</option>
-			<option value="MULT3">MULT3</option>
-			<option value="NTCO3">NTCO3</option>
-			<option value="PETR3">PETR3</option>
-			<option value="PETR4">PETR4</option>
-			<option value="PSSA3">PSSA3</option>
-			<option value="QUAL3">QUAL3</option>
-			<option value="RADL3">RADL3</option>
-			<option value="RAIL3">RAIL3</option>
-			<option value="RENT3">RENT3</option>
-			<option value="SANB11">SANB11</option>
-			<option value="SBSP3">SBSP3</option>
-			<option value="SEER3">SEER3</option>
-			<option value="SULA11">SULA11</option>
-			<option value="SUZB3">SUZB3</option>
-			<option value="TAEE11">TAEE11</option>
-			<option value="TIMP3">TIMP3</option>
-			<option value="TRPL4">TRPL4</option>
-			<option value="UGPA3">UGPA3</option>
-			<option value="USIM5">USIM5</option>
-			<option value="VALE3">VALE3</option>
-			<option value="VIVT3">VIVT3</option>
-			<option value="VVAR3">VVAR3</option>
-			<option value="WEGE3">WEGE3</option>
-			<option value="YDUQ3">YDUQ3</option>
-		</select>
-		<button type="submit">Gerar gráfico</button>
-	</form>
-</body>
-</html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Danilo Invest</title>
+    <style>
+      /* Estilo do corpo da página */
+      body {
+        background-color: #0f1724;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Estilo do cabeçalho */
+      header {
+        background-color: #1b2735;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Estilo do título do cabeçalho */
+      h1 {
+        margin: 0;
+        font-size: 40px;
+      }
+
+      /* Estilo do subtítulo do cabeçalho */
+      h2 {
+        margin: 10px 0 0;
+        font-size: 24px;
+        font-weight: normal;
+      }
+
+      /* Estilo do corpo da página */
+      main {
+        padding: 40px;
+        text-align: center;
+      }
+
+      /* Estilo dos destaques do corpo */
+      .destaque {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      /* Estilo do formulário */
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      /* Estilo das labels do formulário */
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      /* Estilo dos campos do formulário */
+      input[type="text"],
+      input[type="email"],
+      select[name="acao"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+      }
+
+      /* Estilo do botão do formulário */
+      button[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      /* Estilo do rodapé */
+      footer {
+        background-color: #1b2735;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* Estilo dos links do rodapé */
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* Estilo dos links do rodapé quando hover */
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Danilo Invest</h1>
+      <h2>O site mais completo para seus investimentos</h2>
+    </header>
+    <main>
+      <div class="destaque">Gráfico de ações</div>
+      <p>Escolha uma ação para gerar seu gráfico</p>
+      <form method="POST" action="{{ url_for('gerar_grafico') }}">
+            <select name="acao">
+              <option value="ABEV3">ABEV3</option>
+              <option value="AZUL4">AZUL4</option>
+              <option value="B3SA3">B3SA3</option>
+              <option value="BBAS3">BBAS3</option>
+              <option value="BBDC3">BBDC3</option>
+              <option value="BBDC4">BBDC4</option>
+              <option value="BBSE3">BBSE3</option>
+              <option value="BEEF3">BEEF3</option>
+              <option value="BPAC11">BPAC11</option>
+              <option value="BRAP4">BRAP4</option>
+              <option value="BRDT3">BRDT3</option>
+              <option value="BRFS3">BRFS3</option>
+              <option value="BRKM5">BRKM5</option>
+              <option value="BRML3">BRML3</option>
+              <option value="BTOW3">BTOW3</option>
+              <option value="CCRO3">CCRO3</option>
+              <option value="CIEL3">CIEL3</option>
+              <option value="CMIG4">CMIG4</option>
+              <option value="COGN3">COGN3</option>
+              <option value="CPFE3">CPFE3</option>
+              <option value="CRFB3">CRFB3</option>
+              <option value="CSAN3">CSAN3</option>
+              <option value="CSNA3">CSNA3</option>
+              <option value="CVCB3">CVCB3</option>
+              <option value="CYRE3">CYRE3</option>
+              <option value="ECOR3">ECOR3</option>
+              <option value="ELET3">ELET3</option>
+              <option value="ELET6">ELET6</option>
+              <option value="EMBR3">EMBR3</option>
+              <option value="ENBR3">ENBR3</option>
+              <option value="ENEV3">ENEV3</option>
+              <option value="ENGI11">ENGI11</option>
+              <option value="EQTL3">EQTL3</option>
+              <option value="EZTC3">EZTC3</option>
+              <option value="FLRY3">FLRY3</option>
+              <option value="GGBR4">GGBR4</option>
+              <option value="GNDI3">GNDI3</option>
+              <option value="GOAU4">GOAU4</option>
+              <option value="GOLL4">GOLL4</option>
+              <option value="HAPV3">HAPV3</option>
+              <option value="HGTX3">HGTX3</option>
+              <option value="HYPE3">HYPE3</option>
+              <option value="IGTA3">IGTA3</option>
+              <option value="IRBR3">IRBR3</option>
+              <option value="ITSA4">ITSA4</option>
+              <option value="ITUB4">ITUB4</option>
+              <option value="JBSS3">JBSS3</option>
+              <option value="JHSF3">JHSF3</option>
+              <option value="KLBN11">KLBN11</option>
+              <option value="LAME4">LAME4</option>
+              <option value="LCAM3">LCAM3</option>
+              <option value="LREN3">LREN3</option>
+              <option value="MGLU3">MGLU3</option>
+              <option value="MRFG3">MRFG3</option>
+              <option value="MRVE3">MRVE3</option>
+              <option value="MULT3">MULT3</option>
+              <option value="NTCO3">NTCO3</option>
+              <option value="PETR3">PETR3</option>
+              <option value="PETR4">PETR4</option>
+              <option value="PSSA3">PSSA3</option>
+              <option value="QUAL3">QUAL3</option>
+              <option value="RADL3">RADL3</option>
+              <option value="RAIL3">RAIL3</option>
+              <option value="RENT3">RENT3</option>
+              <option value="SANB11">SANB11</option>
+              <option value="SBSP3">SBSP3</option>
+              <option value="SEER3">SEER3</option>
+              <option value="SULA11">SULA11</option>
+              <option value="SUZB3">SUZB3</option>
+              <option value="TAEE11">TAEE11</option>
+              <option value="TIMP3">TIMP3</option>
+              <option value="TRPL4">TRPL4</option>
+              <option value="UGPA3">UGPA3</option>
+              <option value="USIM5">USIM5</option>
+              <option value="VALE3">VALE3</option>
+              <option value="VIVT3">VIVT3</option>
+              <option value="VVAR3">VVAR3</option>
+              <option value="WEGE3">WEGE3</option>
+              <option value="YDUQ3">YDUQ3</option>
+            </select>
+            <button type="submit">Gerar gráfico</button>
+      </form>
+    </main>
+    <footer>
+      <p>Copyright © 2023 -
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a>
+      </p>
+    </footer>
+    
